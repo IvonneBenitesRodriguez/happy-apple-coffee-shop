@@ -69,29 +69,25 @@
             "labels": [
               "Application Boundary"
             ],
-            "id": "60bb9a0c-c401-4eed-94c2-765f925db749",
+            "id": "7077ef5b-929f-498a-b03a-2dd1aa414544",
             "source": {
               "x": 481,
               "y": 120
             },
             "target": {
               "cell": "5a30f8a2-ae4c-4782-9c7d-c4249ab80707",
-              "port": "c2a4780f-8669-4570-a3ba-30fdab6673ac"
+              "port": "b97a1bc9-b7a4-4689-a632-3235e572aa50"
             },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 200
-              },
-              {
-                "x": 520,
-                "y": 220
-              },
-              {
-                "x": 560,
-                "y": 220
-              }
-            ]
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
