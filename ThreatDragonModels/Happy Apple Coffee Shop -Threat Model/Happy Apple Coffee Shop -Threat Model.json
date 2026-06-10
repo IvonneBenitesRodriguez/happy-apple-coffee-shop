@@ -400,8 +400,8 @@
           },
           {
             "position": {
-              "x": 809,
-              "y": 60
+              "x": 780,
+              "y": 160
             },
             "size": {
               "width": 120,
@@ -520,13 +520,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -650,7 +643,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -661,30 +654,40 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "SQL Queries",
+              "description": "API validates cart data, calculates the total server-side and persists the order information in the PostgreSQL database.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "TLS",
               "threats": [],
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "SQL Queries"
             ],
-            "id": "788376fc-72e8-4b3d-9f91-4420832f99cb",
+            "id": "03a749a4-e088-4df1-92c6-a4afe361be8f",
             "source": {
-              "x": 630,
-              "y": 145
+              "x": 676,
+              "y": 120
             },
             "target": {
-              "x": 730,
-              "y": 245
+              "x": 776,
+              "y": 220
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ],
