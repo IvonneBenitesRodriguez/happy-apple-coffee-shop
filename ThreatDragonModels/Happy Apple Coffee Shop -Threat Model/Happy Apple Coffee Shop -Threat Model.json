@@ -418,8 +418,8 @@
                 "text": "Rails API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -516,12 +516,80 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ebc23b62-1eb9-4c0a-88ff-f13283c2e8ba",
+                  "title": "Direct Request Without Frontend",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": " Attacker bypasses the frontend and sends requests directly to the Rails API endpoint on Railway using tools like Postman or curl, impersonating the legitimate frontend.",
+                  "mitigation": "CORS policy, API authentication tokens, Rack::Attack, validate origin of requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "5bcbbeac-6aaa-403a-9957-b40b0c5059a3",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Attacker sends malicious SQL code through the API inputs to manipulate or destroy the PostgreSQL database.\n",
+                  "mitigation": "ActiveRecord parameterized queries, strong parameters, input validation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "f7d61291-3774-4ec1-8b6c-a6779141f207",
+                  "title": "Data Exposure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive order data and user information stored in PostgreSQL could be exposed if the API lacks proper access controls or returns excessive data in responses.",
+                  "mitigation": " Implement proper access controls, return only necessary data in API responses, encrypt sensitive data at rest, use environment variables for database credentials.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "a078090c-ad13-4f02-8c5f-4d38d3bb5596",
+                  "title": "Privilege Escalation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker gains unauthorized access to admin endpoints or database management, escalating from a regular user to administrator level.",
+                  "mitigation": "Implement authorization with Pundit or CanCanCan, restrict admin endpoints, principle of least privilege for database user.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -796,32 +864,7 @@
               "x": 860,
               "y": 90
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
@@ -897,6 +940,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 10
   }
 }
