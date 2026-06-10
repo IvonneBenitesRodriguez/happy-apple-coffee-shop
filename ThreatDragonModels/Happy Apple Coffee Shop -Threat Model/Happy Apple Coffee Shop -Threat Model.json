@@ -221,13 +221,6 @@
                 "spoofing": 1,
                 "repudiation": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -244,8 +237,8 @@
                 "text": "Frontend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -342,12 +335,73 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "f25dad3a-254f-4557-9ab5-de150fdd7e14",
+                  "title": "XSS Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attacker injects malicious scripts into the frontend to steal user data or manipulate the shopping cart content.",
+                  "mitigation": "Content Security Policy (CSP), input sanitization, output encoding, X-XSS-Protection header.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "3c6086ed-567a-45b6-9994-3ac4b8da7de0",
+                  "title": "Price Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attacker manipulates product prices directly in the browser via DevTools before sending the cart data to the API.",
+                  "mitigation": "Always validate and calculate prices server-side in Rails API. Never trust prices sent from the frontend.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "c39c978b-337c-48a1-945b-2c0d88a5e28d",
+                  "title": "DDoS Attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Attacker floods the Rails API endpoints with massive requests making the application unavailable for legitimate users.",
+                  "mitigation": "Rack::Attack rate limiting, IP throttling, request limiting per endpoint.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "16e28e49-f969-4c11-9a10-a6d7de5efb66",
+                  "title": "Direct Request Without Frontend",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Attacker bypasses the frontend and sends requests directly to the Rails API endpoint on Railway using tools like Postman or curl, impersonating the legitimate frontend.",
+                  "mitigation": "CORS policy, API authentication tokens, Rack::Attack, validate origin of requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -759,6 +813,11 @@
                 "button-remove",
                 "vertices",
                 "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
                 "target-arrowhead"
               ],
               "name": null
@@ -838,6 +897,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 6
   }
 }
