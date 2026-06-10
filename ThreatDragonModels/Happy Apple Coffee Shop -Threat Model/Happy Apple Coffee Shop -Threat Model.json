@@ -43,8 +43,8 @@
           },
           {
             "position": {
-              "x": 261.25,
-              "y": 70
+              "x": 201.25,
+              "y": 75
             },
             "size": {
               "width": 90,
@@ -160,7 +160,7 @@
           },
           {
             "position": {
-              "x": 481,
+              "x": 421.25,
               "y": 80
             },
             "size": {
@@ -280,8 +280,8 @@
           },
           {
             "position": {
-              "x": 610,
-              "y": 90
+              "x": 630,
+              "y": 120
             },
             "size": {
               "width": 60,
@@ -400,8 +400,8 @@
           },
           {
             "position": {
-              "x": 709,
-              "y": 75
+              "x": 809,
+              "y": 60
             },
             "size": {
               "width": 120,
@@ -520,6 +520,13 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -560,8 +567,8 @@
             ],
             "id": "2dc2478a-20ce-4332-aa80-aa69c35be803",
             "source": {
-              "x": 351,
-              "y": 70
+              "x": 291,
+              "y": 90
             },
             "target": {
               "cell": "7db807ae-a918-47f9-818d-854a503fca78",
@@ -569,8 +576,12 @@
             },
             "vertices": [
               {
-                "x": 440,
-                "y": 110
+                "x": 330,
+                "y": 90
+              },
+              {
+                "x": 380,
+                "y": 130
               }
             ]
           },
@@ -612,8 +623,8 @@
             ],
             "id": "938bc0f9-a3c9-4490-af44-7ef39d691b25",
             "source": {
-              "x": 519,
-              "y": 80
+              "cell": "7db807ae-a918-47f9-818d-854a503fca78",
+              "port": "609df0fc-0a17-44ab-a338-de41effbad2e"
             },
             "target": {
               "cell": "5a30f8a2-ae4c-4782-9c7d-c4249ab80707",
@@ -621,19 +632,59 @@
             },
             "vertices": [
               {
+                "x": 520,
+                "y": 60
+              },
+              {
                 "x": 570,
-                "y": 80
+                "y": 110
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
             ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
+            "id": "788376fc-72e8-4b3d-9f91-4420832f99cb",
+            "source": {
+              "x": 630,
+              "y": 145
+            },
+            "target": {
+              "x": 730,
+              "y": 245
             }
           }
         ],
