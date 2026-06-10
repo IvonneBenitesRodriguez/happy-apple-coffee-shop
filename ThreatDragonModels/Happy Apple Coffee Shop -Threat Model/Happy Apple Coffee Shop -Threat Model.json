@@ -678,16 +678,6 @@
             "target": {
               "x": 776,
               "y": 220
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             }
           }
         ],
