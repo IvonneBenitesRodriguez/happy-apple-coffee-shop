@@ -280,8 +280,8 @@
           },
           {
             "position": {
-              "x": 560,
-              "y": 80
+              "x": 610,
+              "y": 90
             },
             "size": {
               "width": 60,
@@ -400,8 +400,8 @@
           },
           {
             "position": {
-              "x": 639,
-              "y": 70
+              "x": 709,
+              "y": 75
             },
             "size": {
               "width": 120,
@@ -573,6 +573,68 @@
                 "y": 110
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "JSON Cart Data",
+              "description": "Frontend sends a POST request with cart data (product IDs and quantities) in JSON format to the Rails API for order processing.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "JSON Cart Data"
+            ],
+            "id": "938bc0f9-a3c9-4490-af44-7ef39d691b25",
+            "source": {
+              "x": 519,
+              "y": 80
+            },
+            "target": {
+              "cell": "5a30f8a2-ae4c-4782-9c7d-c4249ab80707",
+              "port": "b97a1bc9-b7a4-4689-a632-3235e572aa50"
+            },
+            "vertices": [
+              {
+                "x": 570,
+                "y": 80
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ],
         "description": "Data flow diagram showing frontend, API and database layers with STRIDE threat analysis"
