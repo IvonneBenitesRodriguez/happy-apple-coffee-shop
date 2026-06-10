@@ -18,6 +18,40 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Internet Boundary"
+            ],
+            "id": "643dc30a-aed9-435a-ac6c-82a848a63543",
+            "source": {
+              "x": 291,
+              "y": 120
+            },
+            "target": {
+              "cell": "7db807ae-a918-47f9-818d-854a503fca78",
+              "port": "c2a4780f-8669-4570-a3ba-30fdab6673ac"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 140
+              }
+            ]
+          },
+          {
             "position": {
               "x": 291.25,
               "y": 10
