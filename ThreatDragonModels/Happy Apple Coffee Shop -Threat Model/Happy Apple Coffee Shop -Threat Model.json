@@ -169,7 +169,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Frontend-Github pages"
+                "text": "Frontend"
               },
               "body": {
                 "stroke": "#333333",
@@ -265,7 +265,7 @@
             "zIndex": 3,
             "data": {
               "type": "tm.Process",
-              "name": "Frontend-Github pages",
+              "name": "Frontend",
               "description": "Static frontend with shopping cart logic in JavaScript. Deployed on Github pages.",
               "outOfScope": false,
               "isTrustBoundary": false,
