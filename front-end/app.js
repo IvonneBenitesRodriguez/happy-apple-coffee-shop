@@ -1,5 +1,4 @@
-const API_URL = 'http://localhost:3000/api/v1';
-
+const API_URL = 'https://happy-apple-coffee-shop-production.up.railway.app/api/v1';
 let cart = [];
 let products = [];
 
