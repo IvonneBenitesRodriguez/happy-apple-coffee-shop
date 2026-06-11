@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f5f9ee;
+}
+header{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+} 
+
+div#app{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap:60px;
+    padding: 20px;
+}
+
+section#product-list, h3{
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+  }
+
+section div#product-1, div#product-2,div#product-3,div#product-4,div#product-5{
+display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+#product-1 span:first-child,
+#product-2 span:first-child,
+#product-3 span:first-child,
+#product-4 span:first-child,
+#product-5 span:first-child {
+  width: 140px;
+}
+#product-1 span:nth-child(2),
+#product-2 span:nth-child(2),
+#product-3 span:nth-child(2),
+#product-4 span:nth-child(2),
+#product-5 span:nth-child(2) {
+  width: 110px;
+}
+section.picture{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+}
+article.images,
+article.images-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+img.picture,
+img.picture-1{
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+span.facilities,
+span.products-coffee {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #333;
+}
+
+section#cart-panel{
+  background-color: white;
+  width: 15%;
+  font-family: "Roboto", sans-serif;
+  
+}
+section#cart-panel,h3{
+  text-align: center;
+  margin-top: 1rem;
+}
+ button.btn-add{
+  background-color: brown;
+  color: white;
+  padding: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
